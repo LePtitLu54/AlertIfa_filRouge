@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="formulaire">
+        <div class="card border-primary mb-3" id="boite">
+            <div class="card-header">Ajouter Utilisateur
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+
+                  <label for="id">ID</label>
+                <input type="text" class="form-control"  id="id">
+
+                  <label for="pseudo">Pseudo</label>
+                  <input type="text" class="form-control" id="pseudo">
+  
+                  <label for="nom">Nom</label>
+                  <input type="text" class="form-control" id="nom">
+  
+                  <label for="prenom">Prenom</label>
+                  <input type="text" class="form-control" id="prenom">
+  
+                  <label for="mail">Email</label>
+                  <input type="text" class="form-control" id="mail">
+  
+                  <label for="statut">statut</label>
+                  <input type="text" class="form-control" id="statut">
+
+                  <label for="password">password</label>
+                  <input type="text" class="form-control" id="password">
+                    
+
+                    
+                    <div class="form-group">
+                        <label for="choixGroupe">Selectionner groupe</label>
+                        <select class="form-control" id="choixGroupe">
+                          
+                        </select>
+                      </div>
+                
+                </p>
+                <div style="text-align: right;">
+                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="cancel()">Cancel</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="valider()">Valider</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info">
+      <div class="card border-primary mb-3" id="boiteMod">
+          <div class="card-header">Modifier Utilisateur
+          </div>
+          <div class="card-body">
+              <p class="card-text">
+  
+               
+
+                  <label for="pseudoI">Pseudo</label>
+                  <input type="text" class="form-control" id="pseudoI">
+  
+                  <label for="nomI">Nom</label>
+                  <input type="text" class="form-control" id="nomI">
+  
+                  <label for="prenomI">Prenom</label>
+                  <input type="text" class="form-control" id="prenomI">
+  
+                  <label for="mailI">Email</label>
+                  <input type="text" class="form-control" id="mailI">
+  
+                  <label for="statutI">statut</label>
+                  <input type="text" class="form-control" id="statutI">
+
+                  <label for="passwordI">password</label>
+                  <input type="text" class="form-control" id="passwordI">
+
+                      <ul id="choixGroupeI">
+                        
+                      </ul>
+                   
+              </p>
+              <div style="text-align: right;">
+              <button class="btn btn-outline-danger my-2 my-sm-0" onclick="cancel()">Cancel</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" onclick="change()">Save Change</button>
+          </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+    <div id="formulaireGroupe">
+        <div class="card border-primary mb-3" id="boiteG">
+            <div class="card-header">Ajouter Groupe
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+    
+                    <label for="libelle">Nom</label>
+                    <input type="text" class="form-control" id="libelle">
+                
+                </p>
+                <div style="text-align: right;">
+                <button class="btn btn-outline-danger my-2 my-sm-0" onclick="cancelG()">Cancel</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="validerG()">Valider</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="AjouterGroupe">
+      <div class="card border-primary mb-3" id="boiteAjouterGroupe">
+          <div class="card-header">Ajouter Groupe
+          </div>
+          <div class="card-body">
+          <div> User n°  <label id="userId"></label></div>
+              <select id="groupeAjouter">
+
+              </select>
+              <div style="text-align: right;">
+              <button class="btn btn-outline-danger  my-2 my-sm-0" onclick="cancelAG()">Cancel</button>
+              <button class="btn btn-outline-success  my-2 my-sm-0" onclick="validerAG(event)">Valider</button>
+          </div>
+          </div>
+      </div>
+  </div>
+
+
+  <header style="margin-bottom: 2rem;">
+    <nav id="menu" class="navbar navbar-expand-lg">
+        <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px;">
+            
+            Alert'Ifa
+        </a>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Interface Administrateur</a>
+            </li>
+            
+          </ul>
+
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" id="chercher" placeholder="Search">
+            <button class="btn btn-outline-warning" onclick="rechercher()">Search</button>
+          </div>
+          
+          <button type="button" id="deconnection"  class="btn btn-outline-danger" style="margin-left: 1rem;" onclick="deconnexion()" >Deconnexion</button>
+      </nav>
+    
+    </header>
+
+      
+    <div class="container-fluid " style="height: 80vh;">
+
+
+
+     
+        <div class="row">
+          <div class="col-3">
+        
+            <div class="card border-primary mb-3">
+                <div class="card-header">INFORMATIONS GENERALES</div>
+                <div class="card-body">
+                    <p class="card-text">
+        
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Users
+                            <span class="badge badge-primary badge-pill" id="nbUsers">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Activ users
+                            <span class="badge badge-primary badge-pill" id="nbUsersActiv">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Groups
+                            <span class="badge badge-primary badge-pill" id="nbGroups">1</span>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card border-primary mb-3">
+              <div class="card-header">TABLEAU GROUPES</div>
+              <div class="card-body sc1 tab1">
+                  <p class="card-text">
+                  
+                      
+  
+                          <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th scope="col">LIBELLE</th>
+                                  <th scope="col">DATE</th>
+                                  <th scope="col"></th>
+                                </tr>
+                              </thead>
+                              <tbody id="tab_groupe">
+                                
+                                
+                              </tbody>
+                            </table>
+                        </p>
+                      </div>
+                    
+                    
+               
+          </div>
+          <div style="margin-top: 2rem; text-align: right;">
+            <button type="button" class="btn btn-outline-success" onclick="addGroupe()">Ajouter Groupe</button>
+          </div>
+        </div>
+
+            <div class="col-9">
+      
+              <div class="card border-primary mb-3">
+                    <div class="card-header">Liste des utilisateurs</div>
+                    <div class="card-body sc1 tab">
+                      <p class="card-text">
+
+                        <table class="table table-hover" style ="color:white;">
+                            <thead>
+                              <tr>
+                                <th scope="col">NOM</th>
+                                <th scope="col">PRENOM</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Profil</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Groupes</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody id="tab_user">
+                              
+                              
+                            </tbody>
+                          </table>
+                      </p>
+                    </div>
+                   
+                  </div>
+
+                <div style="margin-top: 2rem; text-align: right;">
+                  <button type="button" class="btn btn-outline-success" onclick="addUtilisateur()">Ajouter Utilisateur</button>
+                </div>
+            </div>
+              
+                  
+               
+           
+
+ 
+            </div>
+             </div>
+
+         
+
+               
+            
+        
+
+    
+
+ 
+      <script src="script.js"></script>
+</body>
+</html>

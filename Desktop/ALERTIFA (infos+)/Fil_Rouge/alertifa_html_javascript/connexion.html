@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CONNEXION ALERTIFA</title>
+
+        <!--   CSS  -->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/style.css" >
+        <link href="css/connexion.css" rel="stylesheet">
+        
+    </head>
+    <body class="text-center fond">
+    
+        <main class="form-signin">
+
+          <h1 class="h3 mb-3 fw-normal blanc">Merci de se connecter</h1>
+
+          <div id="login-error-msg-holder">
+            <img class="mb-4" src="img/logo_ifa.png" alt="" width="72" height="72">
+              <p id="login-error-msg">Invalide mail <span id="error-msg-second-line">et/ou mot de passe </span></p>
+            </div>
+
+          <form id="login-form">
+
+              <input type="email" name="username" class="form-control login-form-field" id=" username-field" placeholder="mail">
+              <input type="password" name="mdp" class="form-control login-form-field" id="password-field" placeholder="Password">
+              <input type="submit" class="w-100 btn btn-lg btn-light button" value="Login" id="login-form-submit" > 
+          </form>
+        </main>
+        <script defer src="connexion.js"></script>
+   
+    </body>
+        
+</html>

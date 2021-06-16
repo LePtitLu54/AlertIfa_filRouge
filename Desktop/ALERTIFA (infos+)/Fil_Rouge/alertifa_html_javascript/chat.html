@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Forum</title>
+</head>
+<header>
+  <nav id="menu" class="navbar navbar-expand-lg">
+    <a class="navbar-brand text-warning" href="index.html" style="font-size: 30px;">
+        
+        Alert'Ifa
+    </a>
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Interface Utilisateur</a>
+        </li>
+        
+      </ul>
+
+      <div class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" id="chercher" placeholder="Search">
+        <button class="btn btn-outline-warning" onclick="rechercher()">Search</button>
+      </div>
+      
+      <button type="button" class="btn btn-outline-danger"  style="margin-left: 1rem;" onclick="deconnexion()">Deconnexion</button>
+  </nav>
+</header>
+<body>
+    
+    
+      <div class="container-fluid">
+        <div class="row">
+           <div class="col-2">
+              Première colonne
+           </div>
+           <div class="col-8">
+            <div class="card border-danger mb-3">
+                <div class="card-header" style ="background-color : rgb(255, 51, 0); color: white;">MESSAGES</div>
+                <div class="card-body">
+                  <p class="card-text container sc1" id="zone">
+                   
+                   
+                  </p>
+                </div>
+              </div>
+
+              <div class="container">
+    
+                <fieldset>
+                 
+                  <div class="form-group">
+                 
+                    <input type="text" class="form-control" id="message"></input>
+                  </div>
+                
+                  <button class="btn btn-primary" id="envoi" onclick="envoyer()"><a class="envoyer" href="#msg">Envoyer</a></button>
+                </fieldset>
+           
+            </div>
+           </div>
+           <div class="col-2">
+            Deuxième colonne
+         </div>
+        </div>
+     </div>
+
+      
+
+   
+
+    <script src="script2.js"></script>
+</body>
+</html>

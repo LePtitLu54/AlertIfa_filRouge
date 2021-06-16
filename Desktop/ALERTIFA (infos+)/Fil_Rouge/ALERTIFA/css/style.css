@@ -1,0 +1,55 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+.fond{
+    background-color: #293133;
+}
+.blanc{
+    color: white;
+}
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ff5d2f; /* Green */
+  color: rgb(255, 255, 255);
+}
+
+.profil {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.profil:hover {
+  background-color: #293133; /* Green */
+  color: #293133;
+  border-color: #293133;
+}
+.profil {
+  background-color: #293133; /* Green */
+  color: #293133;
+  border-color: #293133;
+}
+
+.logoSite{
+  margin-top: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
